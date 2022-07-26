@@ -1,0 +1,5 @@
+Grep out private IP space 
+| grep -v -e 10.* -e 192.168.* -e '172\.\(1[6-9]\|2[0-9]\|3[01]\)\.'*
+
+Verify pivate IPs were removed 
+| grep -v -e 10.* -e 192.168.* -e '172\.\(1[6-9]\|2[0-9]\|3[01]\)\.'* | wc -l 
