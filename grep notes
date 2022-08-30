@@ -3,3 +3,6 @@ Grep out private IP space
 
 Verify pivate IPs were removed 
 | grep -v -e 10.* -e 192.168.* -e '172\.\(1[6-9]\|2[0-9]\|3[0-1]\)\.'* | wc -l 
+
+Remove duplicate lines without sorting
+awk '!x[$0]++'
