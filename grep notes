@@ -4,5 +4,11 @@ Grep out private IP space
 Verify pivate IPs were removed 
 | grep -v -e 10.* -e 192.168.* -e '172\.\(1[6-9]\|2[0-9]\|3[0-1]\)\.'* | wc -l 
 
+Grep for IP address
+|grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+
 Remove duplicate lines without sorting
 | awk '!x[$0]++'
+
+Grep for URI/URLs (work in progress)
+| grep "[a-zA-Z0-9/| grep "[a-zA-Z0-9/?=_%:-]*\.[a-zA-Z0-9./?=_%:-]*" | sort | uniq
