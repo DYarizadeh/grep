@@ -12,3 +12,6 @@ Remove duplicate lines without sorting
 
 Grep for URI/URLs (work in progress)
 | grep "[a-zA-Z0-9/| grep "[a-zA-Z0-9/?=_%:-]*\.[a-zA-Z0-9./?=_%:-]*" | sort | uniq
+
+Run md5 deep recursivly on all files then delimnate the filename out using the cut command 
+md5deep -r * |  cut -d " " -f1 > hashes.txt
