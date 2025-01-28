@@ -1,5 +1,5 @@
 Grep for Internet Message IDs in Mail Items Accessed 
-grep -iEo '"InternetMessageId"""":""""<[^>]+>"'
+grep -iEo '"InternetMessageId"""":""""<[^>]+>"' mailitemsaccessed.csv | grep -Eo '<[^>]+>'
 
 Grep for Files in UAL
 grep -hoP '""ObjectId"":""\K[^",]*' files-downloaded.csv | sort | uniq
