@@ -1,3 +1,6 @@
+Grep for Internet Message IDs in Mail Items Accessed 
+grep -iEo '[A-Z0-9]+@[A-Z0-9.-]+\.(prod|PROD)\.outlook\.com' filename
+
 Grep for Files in UAL
 grep -hoP '""ObjectId"":""\K[^",]*' files-downloaded.csv | sort | uniq
 
